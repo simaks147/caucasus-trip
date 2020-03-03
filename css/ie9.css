@@ -1,0 +1,11 @@
+.main-header_nav  nav  ul {
+	display: -ms-box;
+	display: box;
+	-ms-box-pack: justify;
+	box-pack: justify;
+}
+
+.contact_form  input:nth-child(1) {
+    width: 100% !important;
+    margin: 0 !important;
+}

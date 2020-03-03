@@ -1,0 +1,42 @@
+// colors 
+
+$blueLight: #29d9c2;
+$blueMoreLight: #caf0db;
+$blueVeryLight: #f2fefe;
+$blueDark: #01a2a6;
+$blueDarkTransparent: rgba(1, 162, 166, .8);
+$blueDarkMoreTransparent: rgba(1, 162, 166, .5);
+
+$greenLight: #bdf271;
+$greenDark: #b1e568;
+$greenVeryDark: #7ca83f;
+
+$yellowDark: #fff772;
+$yellowLight: #ffffa6;
+
+$brownLight: #f5e99e;
+$brownVeryLight: #fbf6a3;
+$brownDark: #d8cb7d;
+
+$white: #fff;
+$whiteTransparent: rgba(255, 255, 255, .9);
+
+$gray: #777;
+$grayLight: #bcbcbc;
+$grayVeryLight: #e8e8e8;
+$grayDark: #3d3741;
+$grayVeryDark: #2f2933;
+
+// sizes of media queries
+
+$smallMin: 320px;
+$smallAver: 480px;
+$smallMax: 620px;
+
+$mediumMin: 768px;
+$mediumAver: 900px;
+$mediumMax: 1024px;
+
+$largeMin: 1140px;
+$largeAver: 1280px;
+$largeMax: 1440px;

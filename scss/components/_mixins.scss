@@ -1,0 +1,111 @@
+// clearfix 
+@mixin clearfix {
+	&:before,  
+	&:after {  
+    	content: " ";  
+    	display: table;  
+	}  
+	&:after {  
+   		clear: both;  
+	}  
+}
+
+// set family, type and size of font
+@mixin font($familyName, $familyType, $size: 1em) {
+	font: {
+		size: $size;
+		family: $familyName + ', ' + $familyType;
+	}
+}
+
+// set invisible placeholder when the focus
+@mixin invisiblePlaceholder {
+	&:focus::-webkit-input-placeholder {
+		color: transparent;
+	}
+	&:focus::-moz-placeholder          {
+		color: transparent;
+	}
+	&:focus:-moz-placeholder           {
+		color: transparent;
+	}
+	&:focus:-ms-input-placeholder      {
+		color: transparent;
+	}
+}
+
+// set transform for element
+@mixin transform ($effect) {
+	-ms-transform: $effect;
+	-webkit-transform: $effect;
+	transform: $effect;
+}
+
+// set transition for element
+@mixin transition ($prop, $duration) {
+	-webkit-transition: $prop $duration;
+	transition: $prop $duration;
+}
+
+
+// flexbox mixins
+
+// flexbox containers
+@mixin flexbox {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flexbox;
+	display: flex;
+}
+
+// flexbox justify content
+@mixin justify-content($value: flex-start) {
+	@if $value == flex-start {
+		-webkit-box-pack: start;
+		-ms-flex-pack: start;
+	} @else if $value == flex-end {
+		-webkit-box-pack: end;
+		-ms-flex-pack: end;
+	} @else if $value == space-between {
+		-webkit-box-pack: justify;
+		-ms-flex-pack: justify;
+	} @else if $value == space-around {
+		-ms-flex-pack: distribute;		
+	} @else {
+		-webkit-box-pack: $value;
+		-ms-flex-pack: $value;
+	}
+	-webkit-justify-content: $value;
+	-moz-justify-content: $value;
+	justify-content: $value;
+}
+
+// flexbox direction
+@mixin flex-direction($value: row) {
+	@if $value == row-reverse {
+		-webkit-box-direction: reverse;
+		-webkit-box-orient: horizontal;
+	} @else if $value == column {
+		-webkit-box-direction: normal;
+		-webkit-box-orient: vertical;
+	} @else if $value == column-reverse {
+		-webkit-box-direction: reverse;
+		-webkit-box-orient: vertical;
+	} @else {
+		-webkit-box-direction: normal;
+		-webkit-box-orient: horizontal;
+	}
+	-webkit-flex-direction: $value;
+	-moz-flex-direction: $value;
+	-ms-flex-direction: $value;
+	flex-direction: $value;
+}
+
+// flexbox basis
+@mixin flex-basis($value: auto) {
+	-webkit-flex-basis: $value;
+	-moz-flex-basis: $value;
+	-ms-flex-preferred-size: $value;
+	flex-basis: $value;
+}
